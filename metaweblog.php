@@ -584,19 +584,10 @@ class plgXMLRPCmetaWeblogServices
 		
 		$dirPrevPermission = JPath::getPermissions($dir);
 		$tmp_dirPrevPermission = JPath::getPermissions($tmp_dir);
-		// Try to make the css file writeable
-		if (!$ftp['enabled'] && JPath::isOwner($file) && (!JPath::setPermissions($tmp_dir, '0755') || !!JPath::setPermissions($dir, '0755')) ) {
-			JError::raiseNotice('SOME_ERROR_CODE', 'Could not make the folder writable');
-		}
 
 		jimport('joomla.filesystem.file');
 		$return = JFile::write($file, $filecontent);
 
-		// Try to make the css file unwriteable
-		if (!$ftp['enabled'] && JPath::isOwner($file) && (!JPath::setPermissions($dir, $dirPrevPermission ) || !JPath::setPermissions($tmp_dir, $tmp_dirPrevPermission))) {
-			JError::raiseNotice('SOME_ERROR_CODE', 'Could not make the folder unwritable');
-		}
-		
 		$file['name']= JFile::makesafe($file['name']);
 		$file['name']= substr($file['name'], 0, -4) . rand() . '.' . JFile::getExt($file['name']);
 		
