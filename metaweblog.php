@@ -458,10 +458,7 @@ class plgXMLRPCmetaWeblogServices
 
 		$query = 'SELECT c.id, c.title, c.alias, c.created_by, c.introtext, c.created, c.state'
 				.' FROM #__content AS c'
-				.' INNER JOIN #__sections AS s ON c.sectionid = s.id'
-				.' INNER JOIN #__categories AS cc ON c.catid = cc.id'
-				.' WHERE s.published = 1 AND cc.published = 1'
-				.' AND s.access <= '.$aid .' AND cc.access <= '.$aid.' AND c.access <= '.$aid .' AND c.state >= 0'
+				.' c.access <= '.$aid
 				.' ORDER BY c.created DESC';
 		$db->setQuery($query, 0, $numposts);
 		$items = $db->loadObjectList();
@@ -519,7 +516,6 @@ class plgXMLRPCmetaWeblogServices
 			. ' s.title as sectionTitle'
 			. ' FROM #__categories as cc'
 			. ' INNER JOIN #__sections as s ON cc.section = s.id'
-			. ' WHERE s.published = 1 AND cc.published = 1'
 			. ' AND s.access <= '.$user->gid .' AND cc.access <= '.$user->gid 
 			. ' ORDER BY cc.section';
 		$db->setQuery($query);
