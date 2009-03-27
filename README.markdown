@@ -15,7 +15,7 @@ This version has been modified by Brainjuice to work with [Blogo, its weblog edi
 3. Open subsection "System" and change "Enable Web Services" to "Yes"
 4. Click "Apply" at the top of the page
 5. Go to the Extensions menu and choose "Install/Uninstall"
-6. Install the following plugins by copying the URL and pasting into the textfield under "Install from URL":
+6. Download the following plugins and upload the ZIP files to Joomla under "Upload Package File":
 
   * MetaWeblog plugin: http://github.com/benjaminjackson/joomla-metaweblog/zipball/master
   * RSD plugin: http://joomlacode.org/gf/download/frsrelease/7080/23993/rsd.zip
