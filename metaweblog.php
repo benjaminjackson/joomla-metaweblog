@@ -485,6 +485,8 @@ class plgXMLRPCmetaWeblogServices
 					'dateCreated'	=> new xmlrpcval($dateCreated->toISO8601(), 'dateTime.iso8601'),
 					'title'			=> new xmlrpcval($item->title),
 					'description'	=> new xmlrpcval($item->introtext),
+					'more_text'	=> new xmlrpcval($item->introtext),
+					'mt_text_more'	=> new xmlrpcval($item->introtext),
 					'userid'		=> new xmlrpcval($item->created_by),
 					'postid'		=> new xmlrpcval($item->id),
 					'link'			=> new xmlrpcval($articleLink),
