@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install type="plugin" group="xmlrpc" version="1.5.0">
+	<name>XML-RPC - metaWeblog API</name>
+	<author>Justo Gonzalez de Rivera</author>
+	<creationDate>January 2008</creationDate>
+	<copyright>Justo Gonzalez de Rivera</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>justo.derivera@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>0.1</version>
+	<description>metaWeblog XML-RPC API</description>
+	<files>
+		<filename plugin="metaweblog">metaweblog.php</filename>
+	</files>
+	<params>
+		<param name="catid" type="category" default=""	label="Default category" description="" />
+		<param name="hrReadMore" type="radio" default="1" label="Use hr as read more separator" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="frontpage" type="radio" default="1"
+			label="Post articles in the front page">
+			<option value="0">No</option>
+			<option value="1">Always</option>
+			<option value="2">Use the Frontpage category</option>
+		</param>
+	</params>
+</install>
