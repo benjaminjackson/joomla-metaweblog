@@ -17,8 +17,8 @@ This version has been modified by Brainjuice to work with [Blogo, its weblog edi
 5. Go to the Extensions menu and choose "Install/Uninstall"
 6. Download the following plugins and upload the ZIP files to Joomla under "Upload Package File":
 
-  * MetaWeblog plugin: http://github.com/benjaminjackson/joomla-metaweblog/zipball/master
-  * RSD plugin: http://joomlacode.org/gf/download/frsrelease/7080/23993/rsd.zip
+    * MetaWeblog plugin: http://github.com/benjaminjackson/joomla-metaweblog/zipball/master
+    * RSD plugin: http://joomlacode.org/gf/download/frsrelease/7080/23993/rsd.zip
   
   *Note: If you have installed the plugin previously, uninstall it in the "Plugins" subsection by checking it and clicking "Uninstall" at the top of the page.*
 
@@ -31,5 +31,5 @@ This version has been modified by Brainjuice to work with [Blogo, its weblog edi
 * Create a new account
 * Type the url of your homepage and your user and password
 * If the auto configuration doesn't work:
-  * Select MetaWeblog API in blog type
-  * Enter http://yoursite.com/xmlrpc/index.php as the XMLRPC gateway (sometimes called API link)
+    * Select MetaWeblog API in blog type
+    * Enter http://yoursite.com/xmlrpc/index.php as the XMLRPC gateway (sometimes called API link)
