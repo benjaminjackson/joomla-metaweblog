@@ -20,7 +20,7 @@ This version has been modified by Brainjuice to work with [Blogo, its weblog edi
     * MetaWeblog plugin: http://github.com/benjaminjackson/joomla-metaweblog/zipball/master
     * RSD plugin: http://joomlacode.org/gf/download/frsrelease/7080/23993/rsd.zip
   
-  *Note: If you have installed the plugin previously, uninstall it in the "Plugins" subsection by checking it and clicking "Uninstall" at the top of the page.*
+  _Note: If you have installed the plugin previously, uninstall it in the "Plugins" subsection by checking it and clicking "Uninstall" at the top of the page._
 
 7. Go to the Extensions menu and choose "Plugin Manager"
 8. Enable the plugins ("System - Real Simple Discovery (RSD)" and "XMLRPC - metaWeblog API")
