@@ -475,7 +475,7 @@ class plgXMLRPCmetaWeblogServices
 
 		$query = 'SELECT c.id, c.title, c.alias, c.created_by, c.introtext, c.created, c.state'
 				.' FROM #__content AS c'
-				.' WHERE c.access <= '.$aid
+				.' WHERE c.state >= 0 AND c.access <= '.$aid
 				.' ORDER BY c.created DESC';
 		$db->setQuery($query, 0, $numposts);
 		$items = $db->loadObjectList();
