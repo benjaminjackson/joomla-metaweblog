@@ -473,7 +473,7 @@ class plgXMLRPCmetaWeblogServices
 
 		$db =& JFactory::getDBO();
 
-		$query = 'SELECT c.id, c.title, c.alias, c.created_by, c.introtext, c.created, c.state'
+		$query = 'SELECT c.id, c.title, c.alias, c.created_by, c.introtext, c.fulltext, c.created, c.state'
 				.' FROM #__content AS c'
 				.' WHERE c.state >= 0 AND c.access <= '.$aid
 				.' ORDER BY c.created DESC';
