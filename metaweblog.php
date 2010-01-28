@@ -311,7 +311,21 @@ class plgXMLRPCmetaWeblogServices
 			return new xmlrpcresp(0, $xmlrpcerruser+1, JText::_('You can\'t edit other user\'s articles'));
 		}
 		
+		$db =& JFactory::getDBO();
+		$db->setQuery("SET NAMES 'utf8'");
+
+		$category = substr($content['categories'][0], 0, strpos($content['categories'][0],' ('));
+		$query = 'SELECT id,section FROM #__categories WHERE title='.$db->Quote($category);
 		
+		if(!$category){
+			$category = $params->get('catid');
+			$query = 'SELECT id,section FROM #__categories WHERE id='.$db->Quote($category);
+		}
+		
+		$db->setQuery($query);
+		$cat = $db->loadObjectList();
+		
+
 		if($item->isCheckedOut($user->get('id'))) {
 			return new xmlrpcresp(0, $xmlrpcerruser+1, JText::_('Sorry, post is already being edited') );
 		}
@@ -345,6 +359,9 @@ class plgXMLRPCmetaWeblogServices
 		$item->title	 	= html_entity_decode($content['title']);
 		$item->introtext	= $introtext;
 		$item->fulltext		= $fulltext;
+
+		$item->catid	 	= $cat[0]->id;
+		$item->sectionid 	= $cat[0]->section;
 
 		$item->version++;
 		$now = new JDate();
